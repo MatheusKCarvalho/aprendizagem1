@@ -21,3 +21,22 @@ function feito(element) {
     element.innerText = "✔" + element.innerText;
 
 }
+
+let numero = 0 
+let paragrafonumero =  document.getElementById("contador")
+
+function mais() {
+
+    numero ++ ;
+
+    paragrafonumero.innerText = numero
+
+}
+
+function menos() {
+
+    numero -- ;
+
+    paragrafonumero.innerText = numero
+
+}
