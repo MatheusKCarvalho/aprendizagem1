@@ -23,20 +23,27 @@ function feito(element) {
 }
 
 let numero = 0 
-let paragrafonumero =  document.getElementById("contador")
+let pnumero =  document.getElementById("contador")
 
 function mais() {
 
     numero ++ ;
 
-    paragrafonumero.innerText = numero
+    pnumero.innerText = numero
 
 }
 
 function menos() {
-
+if (numero > 0) {
     numero -- ;
+    }
 
-    paragrafonumero.innerText = numero
+    pnumero.innerText = numero
 
 }
+
+function reset() {
+    numero = 0;
+    pnumero.innerText = numero;
+}
+
