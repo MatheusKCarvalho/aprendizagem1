@@ -47,3 +47,13 @@ function reset() {
     pnumero.innerText = numero;
 }
 
+let  fraserandom = document.getElementById("pfrases")
+
+let frases = ["Nunca desacredite dos seus sonhos","Não desista","Continue tentando","Você consegue,você é capaz"];
+
+
+function aleatorio(){
+    let numerofrase = Math.floor(Math.random() * frases.length )
+    let escolher = frases[numerofrase];
+    fraserandom.innerText = escolher
+}
