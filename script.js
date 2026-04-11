@@ -57,3 +57,25 @@ function aleatorio(){
     let escolher = frases[numerofrase];
     fraserandom.innerText = escolher
 }
+
+
+let visivel = true; 
+
+function funcaoesconder() {
+
+    let msgesconder = document.getElementById("msgesconder");
+    let botaoesconder = document.getElementById("btnesconder");
+
+    if (visivel) {
+        msgesconder.style.display = "none";
+        botaoesconder.innerText = "Mostrar";
+
+        visivel = false
+    } else {
+        msgesconder.style.display = "block";
+        botaoesconder.innerText = "Esconder";
+        visivel = true
+    }
+
+
+}
