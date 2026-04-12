@@ -7,28 +7,50 @@ function addTarefa() {
         let lista = document.getElementById("lista");
 
         let texto =  input.value 
-        
 
+        if (texto.trim() === "") {
+            alert("Digite algo")
+            return;
+        }
+        
+        
         lista.innerHTML += "<p onclick='feito(this)' >" + texto + "</p>"
 
     
 
         input.value = ""
 
+        atualizarcontador();
+
 }
+
+
 
 function feito(element) {
     if (element.innerText.startsWith ("✔")) {
-        element.remove();
-        } else {
+        element.remove() 
+        } 
+        else {
             element.innerText = "✔ " + element.innerText;
         }
+    atualizarcontador(); 
+        
 
 }
 
+function atualizarcontador(){
+    let contadortarefas = document.getElementById("contadortarefas")
+    let lista = document.getElementById("lista")
+    let listacontagem = lista.children.length
+    
+    if (listacontagem === 0){
+    contadortarefas.innerText = "Sem tarefas no momento 😴"
+    } else {
+    contadortarefas.innerText = "Quantidades de Tarefas: " + listacontagem
+    }
+    
 
-
-
+}
 
 let numero = 0 
 let pnumero =  document.getElementById("contador")
