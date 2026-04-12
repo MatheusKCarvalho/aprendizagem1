@@ -9,24 +9,26 @@ function addTarefa() {
         let texto =  input.value 
         
 
-        lista.innerHTML += "<p onclick='feito(this)' ondblclick='apagar(this)'>" + texto + "</p>"
+        lista.innerHTML += "<p onclick='feito(this)' >" + texto + "</p>"
 
-        
+    
 
         input.value = ""
 
 }
 
 function feito(element) {
-    element.innerText = "✔" + element.innerText;
+    if (element.innerText.startsWith ("✔")) {
+        element.remove();
+        } else {
+            element.innerText = "✔ " + element.innerText;
+        }
 
 }
 
 
 
-function apagar(element){
-    element.remove();
-}
+
 
 let numero = 0 
 let pnumero =  document.getElementById("contador")
