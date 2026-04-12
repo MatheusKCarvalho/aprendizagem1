@@ -9,7 +9,7 @@ function addTarefa() {
         let texto =  input.value 
         
 
-        lista.innerHTML += "<p onclick='feito(this)'>" + texto + "</p>"
+        lista.innerHTML += "<p onclick='feito(this)' ondblclick='apagar(this)'>" + texto + "</p>"
 
         
 
@@ -20,6 +20,12 @@ function addTarefa() {
 function feito(element) {
     element.innerText = "✔" + element.innerText;
 
+}
+
+
+
+function apagar(element){
+    element.remove();
 }
 
 let numero = 0 
