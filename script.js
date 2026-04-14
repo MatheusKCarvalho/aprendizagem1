@@ -10,8 +10,8 @@ function addTarefa() {
 
         let itens = lista.children //pega todas as tarefas que ja existe
 
-        for (let i = 0; i < itens.length; i++)  { //verifica uma por uma
-            if (itens[i].innerText === texto) { //se todas as tarefas que ja existe (o [i] é tipo pra mostrar qual tarefa é cada (ex:essa é a tarefa1, essa é a 2 e etc) (pelo que entendi)) for igual ao texto 
+        for (let i = 0; i < itens.length; i++)  { // looping (for) fica verifndo uma por uma até acabar (assim que acabar a lista o i vai ser igual e nao menor que o numero da lista, ai ele para, ai sai do looping) quando acabar, ja vai ter verificado tudo
+            if (itens[i].innerText === texto) { //se a tarefa atual (o [i] é tipo pra mostrar qual tarefa é cada (ex:essa é a tarefa1, essa é a 2 e etc) (pelo que entendi)) for igual ao texto 
             alert("são iguais")// alerta, elas sao iguais
             return;// ai para de rodar o comando (para nao adicionar tarefas repetidas)
         }
