@@ -1,6 +1,16 @@
 function trocarTema() {
+    console.log("clicou");
+    let botao = document.getElementById("trocarTema")
     document.body.classList.toggle("escuro")
+    
+
+    if (document.body.classList.contains("escuro")){
+        botao.innerText = "Tema Claro"
+    } else {
+        botao.innerText = "Tema Escuro"
     }
+
+}
 
 function addTarefa() {
         let input = document.getElementById("novaTarefa");
@@ -12,7 +22,7 @@ function addTarefa() {
 
         for (let i = 0; i < itens.length; i++)  { // looping (for) fica verifndo uma por uma até acabar (assim que acabar a lista o i vai ser igual e nao menor que o numero da lista, ai ele para, ai sai do looping) quando acabar, ja vai ter verificado tudo
             if (itens[i].innerText === texto) { //se a tarefa atual (o [i] é tipo pra mostrar qual tarefa é cada (ex:essa é a tarefa1, essa é a 2 e etc) (pelo que entendi)) for igual ao texto 
-            alert("são iguais")// alerta, elas sao iguais
+            alert("essa tarefa ja existe!")// alerta, elas sao iguais
             return;// ai para de rodar o comando (para nao adicionar tarefas repetidas)
         }
         }
