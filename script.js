@@ -56,6 +56,8 @@ function feito(element) {
         else {
             element.innerText = "✔ " + element.innerText;
         }
+        element.classList.toggle("concluido")
+
     atualizarcontador(); 
         
 
