@@ -1,5 +1,4 @@
 function trocarTema() {
-    console.log("clicou");
     let botao = document.getElementById("trocarTema")
     document.body.classList.toggle("escuro")
     
@@ -50,16 +49,8 @@ function addTarefa() {
 
 
 function feito(element) {
-    if (element.innerText.startsWith ("✔")) {
-        element.remove() 
-        } 
-        else {
-            element.innerText = "✔ " + element.innerText;
-        }
         element.classList.toggle("concluido")
 
-    atualizarcontador(); 
-        
 
 }
 
@@ -116,7 +107,7 @@ function aleatorio(){
 
 let visivel = true; 
 
-function funcaoesconder() {
+function toggleMensagem() {
 
     let msgesconder = document.getElementById("msgesconder");
     let botaoesconder = document.getElementById("btnesconder");
